@@ -1,11 +1,6 @@
 import useData from "./useData";
 import { Genre } from "./useGenres";
-
-export type Platform = {
-  id: number;
-  name: string;
-  slug: string;
-};
+import { Platform } from "./usePlatforms";
 
 export type Game = {
   id: number;
