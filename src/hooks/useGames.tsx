@@ -4,6 +4,7 @@ import apiClient, { CanceledError } from "../services/api-client";
 export type Game = {
   id: number;
   name: string;
+  background_image: string;
 };
 
 type FetchGamesResponse = {
