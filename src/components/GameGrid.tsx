@@ -14,7 +14,7 @@ function GameGrid() {
       {error && <Text color="red.500">{error}</Text>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-        spacing={10}
+        spacing={3}
         padding="10px"
       >
         {isLoading
