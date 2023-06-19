@@ -31,7 +31,7 @@ function PlatformIconList({ platforms }: PlatformIconListProps) {
     xbox: FaXbox,
   };
   return (
-    <HStack marginY={1}>
+    <HStack marginY={1} wrap="wrap">
       {platforms.map(({ id, name, slug }) => (
         <Icon key={id} as={iconMap[slug]} title={name} color="gray.500" />
       ))}
