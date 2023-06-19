@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-import apiClient, { CanceledError } from "../services/api-client";
+import useData from "./useData";
 
 type Genre = {
   id: number;
@@ -9,38 +7,6 @@ type Genre = {
   image_background: string;
 };
 
-type FetchGenresResponse = {
-  count: number;
-  results: Genre[];
-};
-
-function useGenres() {
-  const [genres, setGenres] = useState<Genre[]>([]);
-  const [error, setError] = useState("");
-  const [isLoading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    setLoading(true);
-    apiClient
-      .get<FetchGenresResponse>("/genres")
-      .then((res) => {
-        setGenres(res.data.results);
-        setLoading(false);
-      })
-      .catch((err) => {
-        if (err instanceof CanceledError) return;
-        setError(err.message);
-        setLoading(false);
-      });
-
-    return () => {
-      controller.abort();
-    };
-  }, []);
-
-  return { genres, error, isLoading };
-}
+const useGenres = () => useData<Genre>("/genres");
 
 export default useGenres;
