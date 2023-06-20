@@ -1,7 +1,7 @@
 {
   "name": "game-hub",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -32,5 +32,10 @@
     "rimraf": "^5.0.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
-  }
+  },
+  "author": {
+    "name": "Anik Mohammad",
+    "email": "anik7303@gmail.com"
+  },
+  "license": "MIT"
 }
