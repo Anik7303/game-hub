@@ -20,14 +20,8 @@ function App() {
 
   return (
     <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-      templateColumns={{
-        base: "1fr",
-        lg: "200px 1fr",
-      }}
+      templateAreas={{ base: "nav main", lg: `"nav nav" "aside main"` }}
+      templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
       <GridItem area="nav">
         <NavBar />
@@ -44,15 +38,11 @@ function App() {
         <HStack spacing={5} paddingLeft={2} marginBottom={2}>
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
-            onSelect={(platform) =>
-              setGameQuery((state) => ({ ...state, platform }))
-            }
+            onSelect={(platform) => setGameQuery((s) => ({ ...s, platform }))}
           />
           <SortSelector
             sortOrder={gameQuery.sortOrder}
-            onSelect={(sortOrder) =>
-              setGameQuery((state) => ({ ...state, sortOrder }))
-            }
+            onSelect={(sortOrder) => setGameQuery((s) => ({ ...s, sortOrder }))}
           />
         </HStack>
         <GameGrid gameQuery={gameQuery} />
