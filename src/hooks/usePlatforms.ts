@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import ms from "ms";
+
 import platforms from "../data/platforms";
 import platformService from "../services/platform-service";
 
@@ -12,7 +14,7 @@ const usePlatforms = () =>
   useQuery<Platform[], Error>({
     queryKey: ["platforms"],
     queryFn: () => platformService.get().then((res) => res.results),
-    staleTime: 86_400_000, // 24 * 60 * 60 * 1000 ms = 24h
+    staleTime: ms("24h"),
     initialData: platforms,
   });
 
