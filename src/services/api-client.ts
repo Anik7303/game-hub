@@ -15,7 +15,7 @@ const instance = axios.create({
 export default class APIClient<T> {
   constructor(public endpoint: string) {}
 
-  get = (config: AxiosRequestConfig): Promise<FetchResponse<T>> =>
+  get = (config?: AxiosRequestConfig): Promise<FetchResponse<T>> =>
     instance
       .get<FetchResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
