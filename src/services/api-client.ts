@@ -20,4 +20,7 @@ export default class APIClient<T> {
     instance
       .get<FetchResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
+
+  getOne = (id: number | string, config?: AxiosRequestConfig): Promise<T> =>
+    instance.get<T>(`/games/${id}`, config).then((res) => res.data);
 }
