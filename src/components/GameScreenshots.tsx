@@ -8,7 +8,6 @@ type Props = {
 
 function GameScreenshots({ gameId }: Props) {
   const { data: screenshots, error, isLoading } = useScreenshots(gameId);
-  console.log(screenshots);
 
   if (error) throw error;
   if (isLoading) return <Spinner />;

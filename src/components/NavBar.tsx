@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <HStack p="10px" justify="space-between">
       <Link to="/">
-        <Image src={logo} alt="Logo" boxSize="60px" />
+        <Image src={logo} alt="Logo" boxSize="60px" objectFit="cover" />
       </Link>
       <SearchInput />
       <ColorModeSwitch />
