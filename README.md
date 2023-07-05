@@ -2,11 +2,11 @@
 
 ## Information
 
-| #           | Description                             |
-| ----------- | --------------------------------------- |
-| Course Name | [React 18 for beginners][course-url]    |
-| Author      | Mosh Hamedani                           |
-| Website     | [https://codewithmosh.com][website-url] |
+| #            | Description                                                                      |
+| ------------ | -------------------------------------------------------------------------------- |
+| Course Names | [React 18 for beginners][course-url1] & [React Intermediate Topics][course-url2] |
+| Author       | Mosh Hamedani                                                                    |
+| Website      | [https://codewithmosh.com][website-url]                                          |
 
 ## Instructions
 
@@ -30,6 +30,7 @@ npm run dev # run development server
 ```
 
 [vercel-url]: https://game-hub-three-topaz.vercel.app
-[course-url]: https://codewithmosh.com/p/ultimate-react-part1
+[course-url1]: https://codewithmosh.com/p/ultimate-react-part1
+[course-url2]: https://codewithmosh.com/p/ultimate-react-part2
 [website-url]: https://codewithmosh.com
 [rawg-website-url]: https://rawg.io/apidocs
